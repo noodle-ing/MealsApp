@@ -11,11 +11,15 @@
 </template>
 
 <script setup>
-import { computed, defineProps } from "vue";
-import store from "../store";
+import {computed, defineProps, onMounted} from "vue";
+import axiosClient from "../axiosClient.js";
 
 const letters = 'ABCDEFGHIGKLMNOPQRSTUVWXYZ'.split("");
 
+onMounted( async() => {
+    const responce = await axiosClient.get('/list.php?i=list');
+    console.log(responce.data)
+})
 // Экспортируем переменные в шаблон
 const props = defineProps(['meals']);
 </script>
