@@ -7,3 +7,7 @@ export function serchMeals({commit}, keyWord){
             commit('setSearchMeals', data.meals)
         })
 }
+
+export function detaiInformation(id){
+    axiosClient.get(`lookup.php?i=${id}`).then()
+}
