@@ -8,6 +8,9 @@ export function serchMeals({commit}, keyWord){
         })
 }
 
-export function detaiInformation(id){
-    axiosClient.get(`lookup.php?i=${id}`).then()
+export function serchMealByLetter({commit}, keyLetter){
+    axiosClient.get(`search.php?f=${keyLetter}`)
+        .then(({data}) => {
+            commit('setSearchMeals', data.meals)
+        })
 }
