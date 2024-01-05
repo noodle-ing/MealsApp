@@ -17,6 +17,7 @@
                 </div>
             </div>
         </div>
+<!--        <p>{{ meals}}</p>-->
     </div>
 </template>
 

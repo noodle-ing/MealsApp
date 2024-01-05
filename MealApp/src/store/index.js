@@ -10,4 +10,4 @@ const store = createStore({
     getters,
 })
 
-export default store;
+export default store; // обязательная команда чтобы что мы написали а именно хранилище store можно был использовать в во всем приложение

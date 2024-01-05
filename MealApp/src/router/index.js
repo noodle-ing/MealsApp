@@ -9,8 +9,8 @@ import MealDetails from "../views/MealDetails.vue";
 const routes = [
     {
         path: '/',
-        component: DefaultLayout,
-        children:[
+        component: DefaultLayout, // это навбар который всегда будет отображатся не зависимот от роута
+        children:[ // дальше идут пути в зависимотси что идет в URL
             {
                 path: '/',
                 name: 'home',
@@ -41,10 +41,10 @@ const routes = [
 
 ];
 
-const router = createRouter({
+const router = createRouter({ // создаем роут где поределяем какие пути будут и как будет хранится история через метод createWebHistory()
     history: createWebHistory(),
     routes
 })
 
-export default router;
+export default router; // позволяет использовать маршрутизацию в всех частях приложения
 
